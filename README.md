@@ -14,6 +14,7 @@ Frontend: Angular
 Otros: TypeScript, Node.js
 
 Cómo correr el proyecto
+
 Backend:
   Clonar repositorio
 
