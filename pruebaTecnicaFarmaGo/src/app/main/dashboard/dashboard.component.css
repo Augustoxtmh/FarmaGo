@@ -1,0 +1,117 @@
+#dashboard {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  background-color: white;
+  border-radius: 8px;
+  padding: 12px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  margin: 20px;
+  width: 22vw;
+  max-width: 22vw;
+}
+
+.hora-card {
+  height: fit-content;
+  width: 23vw;
+  max-width: 23vw;
+  min-width: 23vw;
+}
+
+.card h4 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.weather-info {
+  display: flex;
+  align-items: center;
+}
+
+#icon{
+  width: 80px;
+}
+
+li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 6px;
+}
+
+img {
+  width: 20%;
+  margin-right: 5%;
+}
+
+#pais {
+  border-radius: 30px;
+  transition: background-color 0.3s;
+}
+
+#pais:hover {
+  background-color: rgb(216, 216, 216);
+}
+
+.country-list {
+  cursor: pointer;
+}
+
+.tarea-lista {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tarea-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 25px;
+  position: relative;
+}
+
+.punto-conector {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 12px;
+  position: relative;
+}
+
+.punto {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 1px solid #333;
+  box-sizing: border-box;
+}
+
+.pendiente {
+  background-color: orange;
+}
+
+.completada {
+  background-color: green;
+}
+
+.cancelada {
+  background-color: red;
+}
+
+.linea {
+  width: 2px;
+  flex-grow: 1;
+  background-color: black;
+  margin-top: 1px;
+  height: 100%;
+}
+
+.descripcion {
+  margin-top: -2px;
+  line-height: 1.4;
+}

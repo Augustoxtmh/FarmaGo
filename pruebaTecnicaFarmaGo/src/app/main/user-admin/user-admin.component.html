@@ -1,0 +1,21 @@
+<div class="container mt-4">
+  <h4 class="mb-3">Usuarios</h4>
+  <table id="usersTable" class="display nowrap table table-striped table-bordered" style="width:100%">
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Email</th>
+        <th>Fecha Registro</th>
+        <th>Último login</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let usuario of usuarios">
+        <td>{{ usuario.nombre }}</td>
+        <td>{{ usuario.email }}</td>
+        <td>{{ usuario.fechaRegistro | date:'dd/MM/yyyy HH:mm:ss' }}</td>
+        <td>{{ usuario.ultimoLogin | date:'dd/MM/yyyy HH:mm:ss' }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,54 @@
+<div id="dashboard">
+  <div class="card" *ngIf="dataClima?.location">
+    <h4>PAÍS SELECCIONADO</h4>
+    <p><strong>{{ dataClima.location.country }}</strong></p>
+    <p>Capital: {{ dataClima.location.name }}</p>
+    <p>Región: {{ dataClima.location.region }}</p>
+    <p>Latitud: {{ dataClima.location.lat | dosDecimales }} Longitud: {{ dataClima.location.lon | dosDecimales }}</p>
+  </div>
+
+  <div class="card">
+    <h4>Otras tareas</h4>
+    <ul class="tarea-lista">
+      <li *ngFor="let tarea of tareasArray; let last = last" class="tarea-item">
+        <div class="punto-conector">
+          <div 
+            class="punto"
+            [ngClass]="{
+              'pendiente': tarea.estado === 'pendiente',
+              'completada': tarea.estado === 'completada',
+              'cancelada': tarea.estado === 'cancelada'
+            }">
+          </div>
+        </div>
+        <span class="descripcion">{{ tarea.descripcion }}</span>
+      </li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h4>PAÍSES DISPONIBLES</h4>
+    <ul>
+      <li class="country-list" id="pais" *ngFor="let pais of paisesArray" (click)="consultarClima(pais[2])">
+        <img [src]="pais[0]" width="20" />{{ pais[1] }}
+      </li>
+    </ul>
+  </div>
+  
+  <div class="card hora-card" *ngIf="dataClima?.current">
+    <h4>Clima</h4>
+    <div class="weather-info">
+      <img id="icon" [src]="dataClima.current.condition.icon" alt="icono del clima">
+      <span>
+        {{ dataClima.current.temp_c }}°C<br>
+        <small>{{ dataClima.current.condition.text }}</small>
+      </span>
+    </div>
+  </div>
+
+  <div class="card hora-card" *ngIf="dataClima?.location">
+    <h4>Hora</h4>
+    <p>{{ horaActual }}</p>
+    <p>{{ dataClima.location.tz_id }} </p>
+  </div>
+</div>

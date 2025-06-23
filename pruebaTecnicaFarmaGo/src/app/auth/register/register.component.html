@@ -1,0 +1,43 @@
+<form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()" class="login-box">
+    <h2>Crear cuenta nueva</h2>
+
+    <div class="input-form">
+        <label for="nombre">Nombre</label>
+        <input id="nombre" type="text" formControlName="nombre" placeholder="Nombre de usuario"/>
+    </div>
+
+    <div class="input-row">
+        <div class="input-form half-width">
+            <label for="contra">Contraseña</label>
+            <input id="contra" type="password" formControlName="contra" placeholder="Contraseña"/>
+        </div>
+
+        <div class="input-form half-width">
+            <label for="confirmar_contra">Confirmar contraseña</label>
+            <input id="confirmar_contra" type="password" formControlName="confirmar_contra" placeholder="Contraseña nuevamente"/>
+        </div>
+
+
+    </div>
+
+    <div class="input-form">
+        <label for="email">Correo</label>
+        <input id="email" type="email" formControlName="email" placeholder="Correo electrónico"/>
+    </div>
+    <div *ngIf="checkoutForm.get('email')?.hasError('emailDuplicado') && submitted" class="error">
+        Este correo electrónico ya está registrado.
+    </div>
+    <div *ngIf="checkoutForm.get('confirmar_contra')?.hasError('mismatch') && submitted" class="error">
+        Las contraseñas no coinciden.
+    </div>
+    <div *ngIf="checkoutForm.get('nombre')?.hasError('minlength') && submitted" class="error">
+        Nombre de usuario muy corto
+    </div>
+    <div *ngIf="checkoutForm.get('contra')?.hasError('minlength') && submitted" class="error">
+        Contraseña muy corta
+    </div>
+
+    <button class="login-button" type="submit">Crear cuenta</button>
+
+    <a routerLink="/login" class="register-link">Ya tenés una cuenta? Iniciá sesión</a>
+</form>

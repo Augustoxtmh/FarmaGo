@@ -1,0 +1,17 @@
+<main>
+  <header>
+  </header>
+
+  <aside class="sidebar" *ngIf="valid">
+    <h3>Dashboards</h3>
+    <ul>
+      <li><a routerLink="/dashboard">Weather</a></li>
+      <li><a routerLink="/users">Usuarios</a></li>
+      <li><a href="#" (click)="cerrarSes($event)">Cerrar sesión</a></li>
+    </ul>
+  </aside>
+
+  <section class="contenido">
+    <router-outlet></router-outlet>
+  </section>
+</main>

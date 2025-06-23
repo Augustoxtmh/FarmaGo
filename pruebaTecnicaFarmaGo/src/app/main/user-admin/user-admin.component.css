@@ -1,0 +1,72 @@
+#usersTable_wrapper {
+    padding: 1.5rem;
+    border-radius: 8px;
+    font-family: 'Roboto', sans-serif;
+}
+
+#usersTable {
+    width: 100% !important;
+    border-collapse: collapse;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+#usersTable thead th {
+    font-weight: bold;
+    color: #333;
+    padding: 10px;
+    border-right: solid 1px gainsboro;
+    border-left: solid 1px gainsboro;
+    cursor: pointer;
+}
+
+#usersTable tbody td {
+    padding: 8px 10px;
+    border: solid 1px gainsboro;
+}
+
+.dt-buttons .dt-button {
+    background-color: #0069d9;
+    border: none;
+    color: white;
+    border-radius: 4px;
+    padding: 6px 12px;
+    font-weight: 500;
+    transition: background-color 0.2s ease-in-out;
+    margin: 0 0 15px 0;
+    cursor: pointer;
+}
+
+.dt-paging-button {
+    background-color: #007bff;
+    border: none;
+    color: white;
+    border-radius: 4px;
+    padding: 6px 12px;
+    margin: 3px;
+    font-weight: 500;
+    transition: background-color 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.dt-paging-button:hover{
+    background-color: #0166d3;
+}
+
+.dt-buttons .dt-button:hover {
+    background-color: #0056b3;
+}
+
+.dt-input {
+    margin-left: 15px;
+}
+
+.container {
+    background-color: white;
+    border-radius: 8px;
+    padding: 12px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    margin: 0 10px;
+}
+
