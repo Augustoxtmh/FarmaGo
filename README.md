@@ -3,7 +3,9 @@ Documentación Prueba Técnica
 Funcionalidades principales:
 
 Gestión de usuarios (creación, consulta, actualización, eliminación)
+
 Visualización de tareas por usuario
+
 Visualización de horas actuales en distintos países
 
 Tecnologías utilizadas
