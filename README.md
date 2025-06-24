@@ -7,8 +7,7 @@ Visualización de tareas por usuario
 Visualización de horas actuales en distintos países
 
 Tecnologías utilizadas
-Backend: NestJS, Prisma ORM, PostgreSQL (u otra base configurada)
-
+Backend: NestJS, Prisma ORM, PostgreSQL
 Frontend: Angular
 
 Otros: TypeScript, Node.js
@@ -47,3 +46,7 @@ Frontend
   
     ng serve
     Acceder a http://localhost:4200
+
+Credenciales básicas que se generaron:
+  admin@test.com    1234
+  test@test.com     abcd
